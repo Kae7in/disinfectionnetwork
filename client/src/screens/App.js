@@ -1,6 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Link } from "react-router-dom";
+
+import logo from '../logo.svg';
+import '../App.css';
 
 class App extends React.Component {
   
@@ -73,7 +75,9 @@ class App extends React.Component {
           </div>
         </div>
       </header>
-      <div className="footer"></div>
+      <div className="footer">
+        <Link to="/distilleries">Distilleries</Link>
+      </div>
     </div>
     );
   }

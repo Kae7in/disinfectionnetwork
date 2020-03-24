@@ -19,9 +19,11 @@
   "homepage": "https://github.com/Kae7in/disinfectionnetwork#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
     "heroku-ssl-redirect": "0.0.4",
+    "node-fetch": "^2.6.0",
     "path": "^0.12.7"
   }
 }
