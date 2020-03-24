@@ -9,12 +9,16 @@ class App extends React.Component {
     this.state = { apiResponse: "" }
   }
 
-  hanldeVolunteerClick() {
+  handleVolunteerClick() {
     window.location.href = 'https://airtable.com/shrROnWzix67w2paM'
   }
 
-  hanldeRequestClick() {
+  handleRequestClick() {
     window.location.href = 'https://airtable.com/shrXPPnAO2PcUHzIP'
+  }
+
+  handleDistilleryClick() {
+    window.location.href = 'https://airtable.com/shrWYpupgbzdrZu16'
   }
 
   // componentWillMount() {
@@ -47,17 +51,19 @@ class App extends React.Component {
           </div>
         </div>
 
-        <button className="request-button" onClick={this.hanldeRequestClick}>
-          REQUEST DISINFECTANT
-        </button>
+        <div className="buttonGroup">
+          <button className="request-button" onClick={this.handleRequestClick}>
+            I need disinfectant
+          </button>
 
-        <button className="volunteer-button" onClick={this.hanldeVolunteerClick}>
-          VOLUNTEER
-        </button>
-        
-        <a className="distillery-button" href="https://airtable.com/shrWYpupgbzdrZu16">
-          <b>I’m a distillery and would like to sign up</b>
-        </a>
+          <button className="distillery-button" onClick={this.handleDistilleryClick}>
+            I'm a distillery
+          </button>
+
+          <button className="volunteer-button" onClick={this.handleVolunteerClick}>
+            I can volunteer
+          </button>
+        </div>
 
         <div className="message">
           Due to overwhelming demand, many hospitals and assisted living facilities find themselves in desperate need of hand sanitizers and disinfectants.
