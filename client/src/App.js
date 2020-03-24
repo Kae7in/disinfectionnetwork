@@ -41,19 +41,13 @@ class App extends React.Component {
 
         <div className="headline">
           <h1>Running out of <b>disinfectant?</b></h1>
-          <h3>We connect you with local US distilleries manufacturing sanitizer.</h3>
-        </div>
-
-        <div className="need-help">
-          <div>We need your help!</div>
-          <div>
-            We’re currently staffing up volunteers to help contact distilleries and other organizations.<br />
-          </div>
+          <h3>Connect directly with local distilleries producing disinfectants.</h3>
+          <h4>We will be opening our database to verified recipients on 3/26</h4>
         </div>
 
         <div className="buttonGroup">
           <button className="request-button" onClick={this.handleRequestClick}>
-            I need disinfectant
+            Request access
           </button>
 
           <button className="distillery-button" onClick={this.handleDistilleryClick}>
@@ -66,15 +60,20 @@ class App extends React.Component {
         </div>
 
         <div className="message">
-          Due to overwhelming demand, many hospitals and assisted living facilities find themselves in desperate need of hand sanitizers and disinfectants.
+          Disinfect Connect is the database for locating and communicating with local distilleries who are producing alcohol based disinfectants.
           <br/>
           <br/>
-          Disinfect Connect helps to connect hospitals, assisted living facilities and other essential organizations with local distilleries producing sanitization products. 
-          <br/>
-          <br/>
-          We are a team of dedicated volunteers trying to make a difference in our local communities. If you've been looking for a way to help – this is your chance. 
+          In response to COVID19, permitted distilleries in the US have ramped up production of hand sanitizer and disinfectants from their extra alcohol stocks. Disinfect Connect helps essential organizations, hospitals and our most at-risk population purchase the disinfectant they desperately need to stop the spread of coronavirus.
+        </div>
+
+        <div className="need-help">
+          <div>We need volunteers!</div>
+          <div>
+            We are currently staffing up a robust team of spirited individuals to help engage directly with distilleries and help bring them online. The more distilleries that get on our platform, the more lives we could potentially save. If you have been looking for a way to help, this is your opportunity.<br />
+          </div>
         </div>
       </header>
+      <div className="footer"></div>
     </div>
     );
   }
