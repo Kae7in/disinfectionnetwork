@@ -17,10 +17,6 @@ class App extends React.Component {
     window.location.href = 'https://airtable.com/shrXPPnAO2PcUHzIP'
   }
 
-  hanldeDistilleryClick() {
-    window.location.href = 'https://airtable.com/shrWYpupgbzdrZu16'
-  }
-
   // componentWillMount() {
   //   fetch('http://localhost:5000/hello')
   //   .then((response) => {
@@ -59,7 +55,7 @@ class App extends React.Component {
           VOLUNTEER
         </button>
         
-        <a className="distillery-button" href="https://google.com">
+        <a className="distillery-button" href="https://airtable.com/shrWYpupgbzdrZu16">
           <b>I’m a distillery and would like to sign up</b>
         </a>
 
