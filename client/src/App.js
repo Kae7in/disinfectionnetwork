@@ -60,13 +60,13 @@ class App extends React.Component {
         </a>
 
         <div className="message">
-        Due to overwhelming demand, many hospitals and assisted living facilities find themselves in desperate need of hand sanitizers and disinfectants.
-        <br/>
-        <br/>
-        The Disinfection Network helps to connect hospitals, assisted living facilities and other essential organizations with local distilleries producing sanitization products. 
-        <br/>
-        <br/>
-        We are a team of dedicated volunteers trying to make a difference in our local communities. If you've been looking for a way to help – this is your chance. 
+          Due to overwhelming demand, many hospitals and assisted living facilities find themselves in desperate need of hand sanitizers and disinfectants.
+          <br/>
+          <br/>
+          The Disinfection Network helps to connect hospitals, assisted living facilities and other essential organizations with local distilleries producing sanitization products. 
+          <br/>
+          <br/>
+          We are a team of dedicated volunteers trying to make a difference in our local communities. If you've been looking for a way to help – this is your chance. 
         </div>
       </header>
     </div>
