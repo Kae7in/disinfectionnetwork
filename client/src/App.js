@@ -36,8 +36,8 @@ class App extends React.Component {
         </div>
 
         <div className="headline">
-          <h1>A marketplace for <b>sanitization</b></h1>
-          <h3>Looking for hand sanitizer or disinfectant? Find local distilleries producing sanitization products.</h3>
+          <h1>Running out of <b>disinfectant?</b></h1>
+          <h3>We connect you with local US distilleries manufacturing sanitizer.</h3>
         </div>
 
         <div className="need-help">
