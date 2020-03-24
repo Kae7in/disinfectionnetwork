@@ -44,7 +44,7 @@ html {
 @media screen and (min-width: 40em) {
   .App-header {
     grid-template-rows: 20% 250px 250px auto;
-    grid-template-columns: auto 500px auto;
+    grid-template-columns: auto 550px auto;
     padding: 0;
   }
 }
@@ -149,15 +149,9 @@ html {
   .headline h3 {
     height: 20px;
     font-size: 20px;
-    max-width: none;
     padding: 0;
     text-indent: 0;
   }
-}
-
-.headline h3 b {
-  font-size: 14px;
-  line-height: 18px;
 }
 
 .need-help {
