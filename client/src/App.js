@@ -17,6 +17,10 @@ class App extends React.Component {
     console.log("request disinfectant")
   }
 
+  hanldeDistilleryClick() {
+    console.log("distillery click")
+  }
+
   // componentWillMount() {
   //   fetch('http://localhost:5000/hello')
   //   .then((response) => {
@@ -50,11 +54,14 @@ class App extends React.Component {
         <button className="request-button" onClick={this.hanldeRequestClick}>
           REQUEST DISINFECTANT
         </button>
-        <div className="request-tagline">Requests open <b>Tues, 3-24-2020</b></div>
 
         <button className="volunteer-button" onClick={this.hanldeVolunteerClick}>
           VOLUNTEER
         </button>
+        
+        <a className="distillery-button" href="https://google.com">
+          <b>I’m a distillery and would like to sign up</b>
+        </a>
 
         <div className="message">
         Due to overwhelming demand, many hospitals and assisted living facilities find themselves in desperate need of hand sanitizers and disinfectants.
