@@ -43,7 +43,7 @@ html {
 /* Large screens */
 @media screen and (min-width: 40em) {
   .App-header {
-    grid-template-rows: 20% min-content min-content min-content min-content min-content min-content;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
     grid-template-columns: auto 550px auto;
     padding: 0;
   }
@@ -72,6 +72,7 @@ html {
   .logo img {
     width: 174px;
     height: 206px;
+    margin-top: 50px;
   }
 }
 
