@@ -10,15 +10,15 @@ class App extends React.Component {
   }
 
   hanldeVolunteerClick() {
-    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfLBGQ8wMEDAuLXHIgBzQlUjyhihUVDpcyYaaIRIUc8YMHTOw/viewform'
+    window.location.href = 'https://airtable.com/shrROnWzix67w2paM'
   }
 
   hanldeRequestClick() {
-    console.log("request disinfectant")
+    window.location.href = 'https://airtable.com/shrXPPnAO2PcUHzIP'
   }
 
   hanldeDistilleryClick() {
-    console.log("distillery click")
+    window.location.href = 'https://airtable.com/shrWYpupgbzdrZu16'
   }
 
   // componentWillMount() {
