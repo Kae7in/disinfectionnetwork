@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import { filter } from 'lodash'
 
+import DisinfectService from '../services/services'
+
 const Distilleries = () => {
   const [distilleries, setDistilleries] = useState([])
   const [searchResults, setSearchResults] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
   useEffect(() => {
-    fetch('http://localhost:5000/distilleries')
-      .then(res => res.json())
+    DisinfectService.getAllDistilleries()
       .then(json => {
         const dist = json && json.data && json.data.records
-        console.log(json)
+        console.log('fetched all distilleries:', json)
         if (dist) {
           setDistilleries(dist)
         }
@@ -40,10 +41,11 @@ const Distilleries = () => {
   return (
     <div>
       <h3>Search</h3>
+      <p>on Name, State (abbreviation), or Zip Code</p>
       <input type="text" value={searchTerm} onChange={handleTextChange()}/>
       <ul>
         {(searchResults.length > 0) ? searchResults.map((distillery, idx) => {
-            return <li key={`dist-${idx}`}>{distillery.fields['Owner Name']}</li>
+            return <li key={`dist-${idx}`}>{distillery.fields['Owner Name']} ({distillery.fields['State']} - {distillery.fields['Zip Code']})</li>
           }) : null
         }
       </ul>
