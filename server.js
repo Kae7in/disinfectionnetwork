@@ -11,7 +11,10 @@ const port = process.env.PORT || 5000
 app.use(cors())
 app.use(sslRedirect())
 dotenv.config()
-console.log('process.env.AIRTABLE_API_KEY', process.env.AIRTABLE_API_KEY)
+
+// caching for fetching distilleries from airtable
+let distilleries = {records: []}
+let lastFetched = (new Date()).getTime()
 
 // AJAX
 app.get('/hello', (req, res) => res.send({ message: 'Welcome to the Disinfection Network.' }))
@@ -21,17 +24,29 @@ app.get('/distilleries', (req, res) => {
   const numRecords = 1000;
   const view = "Master%20view"; //"Public%20View"
   const apiKey = process.env.AIRTABLE_API_KEY; // create a .env file with this var
+
+  // send cache if data exists and within X seconds of last fetch
+  const newTimeStamp = (new Date()).getTime()
+  if (distilleries.records.length > 0 && (newTimeStamp - lastFetched < 5 * 1000)) {
+    console.log('sending cache')
+    return res.send({data: distilleries})
+  } else {
+    console.log('fetching')
+    lastFetched = newTimeStamp
+    return fetch(`https://api.airtable.com/v0/${baseId}/${table}?maxRecords=${numRecords}&view=${view}`, {
+      headers: {
+        "Authorization": `Bearer ${apiKey}`
+      }
+    })
+    .then(res => res.json())
+    .then(json => {
+      distilleries = json
+      return res.send({data: distilleries})
+    })
+    .catch(err => res.err(err))
+  }
   
-  return fetch(`https://api.airtable.com/v0/${baseId}/${table}?maxRecords=${numRecords}&view=${view}`, {
-    headers: {
-      "Authorization": `Bearer ${apiKey}`
-    }
-  })
-  .then(res => res.json())
-	.then(json => {
-    return res.send({data: json})
-  })
-  .catch(err => res.err(err))
+  
 })
 
 // SERVER
