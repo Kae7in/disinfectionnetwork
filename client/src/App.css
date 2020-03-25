@@ -308,9 +308,23 @@ button:focus {
   }
 }
 
+.map-link {
+  grid-row: 5;
+
+  /* Small Screens */
+  justify-self: center;
+}
+
+/* Large screens */
+@media screen and (min-width: 40em) {
+  .map-link {
+    grid-column: 2;
+  }
+}
+
 .need-help {
   /* Small screens */
-  grid-row: 5;
+  grid-row: 6;
   justify-self: center;
 
   display: grid;
@@ -338,7 +352,7 @@ button:focus {
 /* Large screens */
 @media screen and (min-width: 40em) {
   .need-help {
-    grid-row: 5;
+    grid-row: 6;
     grid-column: 2;
     height: 170px;
     justify-self: center;

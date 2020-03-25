@@ -66,6 +66,10 @@ class App extends React.Component {
           In response to COVID19, permitted distilleries in the US have ramped up production of hand sanitizer and disinfectants from their extra alcohol stocks. Disinfect Connect helps essential organizations, hospitals and our most at-risk population purchase the disinfectant they desperately need to stop the spread of coronavirus.
         </div>
 
+        <div className="map-link">
+          <a href="https://drive.google.com/open?id=1PkvQrpdVXbHJy7cNvQcB5jizS5f0anYK&usp=sharing" target="blank">Map of Distilleries</a>
+        </div>
+        
         <div className="need-help">
           <div>We need volunteers!</div>
           <div>
