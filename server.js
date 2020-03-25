@@ -17,9 +17,9 @@ console.log('process.env.AIRTABLE_API_KEY', process.env.AIRTABLE_API_KEY)
 app.get('/hello', (req, res) => res.send({ message: 'Welcome to the Disinfection Network.' }))
 app.get('/distilleries', (req, res) => {
   const baseId = "app6GXpCRTsrba4vh"
-  const table = "Distilleries%20Form%20Results"
+  const table = "Distillery%20Hit%20List" //"Distilleries%20Form%20Results"
   const numRecords = 1000;
-  const view = "Public%20View";
+  const view = "Master%20view"; //"Public%20View"
   const apiKey = process.env.AIRTABLE_API_KEY; // create a .env file with this var
   
   return fetch(`https://api.airtable.com/v0/${baseId}/${table}?maxRecords=${numRecords}&view=${view}`, {
